@@ -44,9 +44,20 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
             MAGNAT
           </span>
         </Link>
-        <button onClick={toggleMenu} className="p-2 text-[#111] bg-[#F7F4F0]">
-          {isMobileMenuOpen ? <X size={20} strokeWidth={1.5} /> : <Menu size={20} strokeWidth={1.5} />}
-        </button>
+        <div className="flex items-center gap-2">
+          <form action={handleLogout} className="flex items-center">
+            <button
+              type="submit"
+              className="p-2 text-[#C0001A] bg-[#F7F4F0] border border-[#C0001A]/10 hover:border-[#C0001A] transition-all cursor-pointer"
+              title="Logout"
+            >
+              <LogOut size={16} strokeWidth={1.5} />
+            </button>
+          </form>
+          <button onClick={toggleMenu} className="p-2 text-[#111] bg-[#F7F4F0]">
+            {isMobileMenuOpen ? <X size={20} strokeWidth={1.5} /> : <Menu size={20} strokeWidth={1.5} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Backdrop Overlay */}
@@ -131,10 +142,10 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
           <form action={handleLogout} className="w-full">
             <button
               type="submit"
-              className="flex items-center gap-4 px-4 py-4 w-full text-[10px] font-bold uppercase tracking-[0.15em] text-[#C0001A] hover:bg-[#C0001A]/5 transition-all group"
+              className="flex items-center gap-4 px-4 py-4 w-full text-[10px] font-bold uppercase tracking-[0.15em] text-[#C0001A] hover:bg-[#C0001A]/5 transition-all group cursor-pointer"
             >
               <LogOut size={16} className="group-hover:-translate-x-1 transition-transform" />
-              Terminate Session
+              Logout
             </button>
           </form>
         </div>
@@ -156,6 +167,15 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
             <div className="h-8 w-8 md:h-10 md:w-10 border border-[#eeeeee] bg-[#F7F4F0] flex items-center justify-center text-[10px] md:text-xs font-bold text-[#111]">
               AD
             </div>
+            <form action={handleLogout} className="flex items-center">
+              <button
+                type="submit"
+                className="flex items-center justify-center h-8 w-8 md:h-10 md:w-10 border border-[#C0001A]/20 hover:border-[#C0001A] bg-white text-[#C0001A] hover:bg-[#C0001A]/5 transition-all cursor-pointer"
+                title="Logout"
+              >
+                <LogOut size={16} />
+              </button>
+            </form>
           </div>
         </header>
 

@@ -37,18 +37,20 @@ export async function middleware(request: NextRequest) {
     data: { user },
   } = await supabase.auth.getUser();
 
+  const adminEmail = process.env.ADMIN_EMAIL;
+
   // Admin route protection
   if (request.nextUrl.pathname.startsWith("/admin")) {
     if (request.nextUrl.pathname === "/admin/login") {
-      // If already logged in and trying to access login page, redirect to admin dashboard
-      if (user) {
+      // If already logged in as admin and trying to access login page, redirect to admin dashboard
+      if (user && adminEmail && user.email === adminEmail) {
         return NextResponse.redirect(new URL("/admin", request.url));
       }
       return response;
     }
 
-    // If not logged in and trying to access any admin page, redirect to login
-    if (!user) {
+    // If not logged in or email does not match admin email, redirect to login
+    if (!user || !adminEmail || user.email !== adminEmail) {
       return NextResponse.redirect(new URL("/admin/login", request.url));
     }
   }
