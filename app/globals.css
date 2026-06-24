@@ -1,0 +1,618 @@
+@import "tailwindcss";
+
+/* ============================================
+   MAGNAT FURNITURE — PREMIUM LUXURY REFINEMENT
+   Full Color Prominence | Architectural Precision
+   ============================================ */
+
+@theme {
+  /* Core Brand Colors (Soft & Premium) */
+  --color-red: #C0001A;
+  --color-gold-classic: #c9a96e;
+  --color-bg-primary: #FCFCFC;
+  --color-bg-secondary: #FAF8F6;
+  --color-bg-dark: #111111;
+  --color-text-main: #111111;
+  --color-text-muted: #666666;
+  --color-border-subtle: #eeeeee;
+  
+  /* Typography */
+  --font-playfair: "Playfair Display", Georgia, serif;
+  --font-lato: "Lato", "Helvetica Neue", sans-serif;
+  --font-inter: "Inter", "Helvetica Neue", sans-serif;
+  --font-outfit: "Outfit", sans-serif;
+
+  /* Premium Elevations */
+  --shadow-luxury: 0 10px 40px rgba(0, 0, 0, 0.04), 0 2px 10px rgba(0, 0, 0, 0.02);
+  --shadow-mega: 0 40px 100px -20px rgba(0, 0, 0, 0.1), 0 20px 50px -10px rgba(0, 0, 0, 0.05);
+
+  /* Spacing */
+  --spacing-section: 5rem; /* py-20 */
+  --spacing-section-sm: 3rem; /* py-12 */
+
+  /* Transitions */
+  --ease-luxury: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+/* ============================================
+   GLOBAL BASE STYLES
+   ============================================ */
+
+body {
+  background-color: #FCFCFC;
+  color: #111111;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: -0.015em;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-lato), sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1.25;
+}
+
+h1 { 
+  font-size: 26px; 
+  margin-bottom: 1rem;
+}
+
+h2 { 
+  font-size: 20px; 
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  h1 { font-size: 34px; margin-bottom: 1.25rem; }
+  h2 { font-size: 24px; margin-bottom: 1.25rem; }
+}
+
+@media (min-width: 1024px) {
+  h1 { font-size: 44px; margin-bottom: 1.5rem; }
+  h2 { font-size: 48px; margin-bottom: 1.5rem; }
+}
+
+h3 { font-size: clamp(18px, 3vw, 20px); }
+
+button {
+  cursor: pointer;
+  font-family: var(--font-inter), sans-serif;
+}
+
+/* ============================================
+   STANDARDIZED LUXURY COMPONENTS
+   ============================================ */
+
+/* Primary CTA (Standardized) */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #111111;
+  color: #ffffff;
+  padding: 1rem 3rem;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  transition: all 0.4s var(--ease-luxury);
+  border: 1px solid #111111;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  color: #111111;
+}
+
+.btn-red {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #C0001A;
+  color: #ffffff;
+  padding: 0.875rem 2.5rem;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  transition: all 0.4s var(--ease-luxury);
+  border: 1px solid #C0001A;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-red:hover {
+  background-color: #111111;
+  border-color: #111111;
+}
+
+.btn-ghost-dark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: #111111;
+  padding: 0.875rem 2.5rem;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  transition: all 0.4s var(--ease-luxury);
+  border: 1px solid #111111;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-ghost-dark:hover {
+  background-color: #111111;
+  color: #ffffff;
+}
+
+/* Standard Imagery (Color Prominent) */
+.img-premium {
+  transition: all 1s var(--ease-luxury);
+}
+
+.img-premium-hover:hover .img-premium {
+  transform: scale(1.05);
+}
+
+/* Section Headings */
+.heading-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #C0001A;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-inter), sans-serif;
+}
+
+.heading-title {
+  font-family: var(--font-lato), sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 36px;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .heading-title { font-size: 48px; margin-bottom: 1.25rem; }
+}
+
+@media (min-width: 1024px) {
+  .heading-title { font-size: 56px; margin-bottom: 1.5rem; }
+}
+
+/* Reusable Section Styles */
+.section-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #C0001A;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-inter), sans-serif;
+}
+
+.section-title {
+  font-size: 28px;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  font-family: var(--font-lato), sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+@media (min-width: 768px) {
+  .section-title { font-size: 36px; margin-bottom: 1.25rem; }
+}
+
+@media (min-width: 1024px) {
+  .section-title { font-size: 44px; margin-bottom: 1.5rem; }
+}
+
+.section-subtitle {
+  font-size: clamp(15px, 2vw, 17px);
+  line-height: 1.7;
+  color: #111111;
+  opacity: 0.6;
+  font-family: var(--font-inter), sans-serif;
+  max-width: 650px;
+  font-weight: 400;
+}
+
+/* Premium Image Container */
+.premium-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  background-color: #f6f6f6;
+  transition: all 0.7s var(--ease-luxury);
+}
+
+.premium-image-wrapper::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.1), transparent);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.premium-image-wrapper:hover::after {
+  opacity: 1;
+}
+
+/* ============================================
+   UTILITIES
+   ============================================ */
+
+.font-number {
+  font-family: var(--font-outfit), sans-serif !important;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+
+.max-container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* Tablet (Minimizing gutters) */
+@media (min-width: 768px) {
+  .max-container {
+    max-width: 740px; 
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+/* 11-12" Small Laptops */
+@media (min-width: 1024px) {
+  .max-container {
+    max-width: 1000px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* 13-14" Medium Laptops */
+@media (min-width: 1280px) {
+  .max-container {
+    max-width: 1240px;
+  }
+}
+
+/* 15-16" Large Laptops */
+@media (min-width: 1440px) {
+  .max-container {
+    max-width: 1400px;
+  }
+}
+
+/* 17-18" Workstations */
+@media (min-width: 1700px) {
+  .max-container {
+    max-width: 1640px;
+  }
+}
+
+
+
+
+::selection {
+  background: #C0001A;
+  color: #ffffff;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #eeeeee;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #111111;
+}
+
+/* ============================================
+   KONDOTTY GALLERY MARQUEE
+   ============================================ */
+
+@keyframes marqueeGallery {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.marquee-track {
+  animation: marqueeGallery 60s linear infinite;
+  animation-play-state: running;
+}
+
+.marquee-track.paused {
+  animation-play-state: paused;
+}
+
+/* WhatsApp Pulse Animation */
+@keyframes whatsapp-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+.whatsapp-pulse {
+  animation: whatsapp-pulse 2s infinite;
+}
+
+/* ============================================
+   ENHANCED WHATSAPP & FLOATING ELEMENTS
+   ============================================ */
+
+/* Enhanced WhatsApp Pulse with Glow */
+@keyframes whatsapp-pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4),
+                0 0 20px rgba(37, 211, 102, 0.2);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0),
+                0 0 30px rgba(37, 211, 102, 0.3);
+    transform: scale(1.02);
+  }
+}
+
+.whatsapp-pulse-glow {
+  animation: whatsapp-pulse-glow 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Smooth Scale on Hover */
+.hover-lift {
+  transition: transform 0.4s var(--ease-luxury), box-shadow 0.4s var(--ease-luxury);
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(17, 17, 17, 0.15);
+}
+
+/* Glass Morphism for Floating Cards */
+.glass-luxury {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Gradient Button (Optional Alternative) */
+.btn-gradient-whatsapp {
+  background: linear-gradient(135deg, #25D366 0%, #20bd5a 100%);
+  color: #ffffff;
+  padding: 1rem 2rem;
+  border-radius: 999px;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  transition: all 0.3s var(--ease-luxury);
+  border: none;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.btn-gradient-whatsapp:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+}
+
+/* ============================================
+   LUXURY MICRO-INTERACTIONS
+   ============================================ */
+
+/* Smooth Underline Links */
+.link-underline {
+  position: relative;
+  display: inline-block;
+  color: #111111;
+  text-decoration: none;
+  transition: color 0.3s var(--ease-luxury);
+}
+
+.link-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #C0001A;
+  transition: width 0.4s var(--ease-luxury);
+}
+
+.link-underline:hover {
+  color: #C0001A;
+}
+
+.link-underline:hover::after {
+  width: 100%;
+}
+
+/* Fade In Animation */
+@keyframes luxury-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: luxury-fade-in 0.8s var(--ease-luxury) forwards;
+}
+
+/* Stagger Animation for Lists */
+.animate-stagger > * {
+  opacity: 0;
+  animation: luxury-fade-in 0.6s var(--ease-luxury) forwards;
+}
+
+.animate-stagger > *:nth-child(1) { animation-delay: 0.1s; }
+.animate-stagger > *:nth-child(2) { animation-delay: 0.2s; }
+.animate-stagger > *:nth-child(3) { animation-delay: 0.3s; }
+.animate-stagger > *:nth-child(4) { animation-delay: 0.4s; }
+.animate-stagger > *:nth-child(5) { animation-delay: 0.5s; }
+
+/* ============================================
+   BADGE & NOTIFICATION STYLES
+   ============================================ */
+
+.badge-live {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 12px;
+  height: 12px;
+  background-color: #C0001A;
+  border-radius: 999px;
+  border: 2px solid #ffffff;
+  animation: badge-pulse 2s ease-in-out infinite;
+}
+
+@keyframes badge-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+/* ============================================
+   RESPONSIVE UTILITIES
+   ============================================ */
+
+/* Mobile-First Contact Bar */
+.mobile-contact-bar {
+  background: #ffffff;
+  box-shadow: 0 -4px 20px rgba(17, 17, 17, 0.1);
+  border-top: 1px solid #eeeeee;
+}
+
+/* Tooltip */
+.tooltip {
+  position: absolute;
+  background-color: #111111;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-family: var(--font-inter), sans-serif;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s var(--ease-luxury);
+  z-index: 1000;
+}
+
+.tooltip-trigger:hover .tooltip {
+  opacity: 1;
+}
+
+/* Arrow for Tooltip */
+.tooltip::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.tooltip-left::before {
+  left: -6px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 6px 6px 6px 0;
+  border-color: transparent #111111 transparent transparent;
+}
+
+/* ============================================
+   ACCESSIBILITY ENHANCEMENTS
+   ============================================ */
+
+/* Focus Styles */
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #C0001A;
+  outline-offset: 4px;
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ============================================
+   PRINT STYLES (Professional Touch)
+   ============================================ */
+
+@media print {
+  .no-print,
+  .whatsapp-pulse,
+  .mobile-contact-bar {
+    display: none !important;
+  }
+  
+  body {
+    background: #ffffff;
+  }
+  
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+}
