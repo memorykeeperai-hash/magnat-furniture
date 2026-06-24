@@ -52,7 +52,6 @@ export default function AdminLoginPage() {
                 type="email"
                 required
                 autoComplete="email"
-                placeholder="admin@magnat.com"
                 className="w-full bg-[#FAFAF8] border border-[#E4DED4] px-4 py-4 text-[#1A1208] text-base placeholder:text-[#C4BDAF] focus:outline-none focus:border-[#C8873A] focus:bg-white transition-all rounded-sm"
               />
             </div>
@@ -72,7 +71,6 @@ export default function AdminLoginPage() {
                   type={showPassword ? "text" : "password"}
                   required
                   autoComplete="current-password"
-                  placeholder="Enter your password"
                   className="w-full bg-[#FAFAF8] border border-[#E4DED4] px-4 pr-11 py-4 text-[#1A1208] text-base placeholder:text-[#C4BDAF] focus:outline-none focus:border-[#C8873A] focus:bg-white transition-all rounded-sm"
                 />
                 <button
