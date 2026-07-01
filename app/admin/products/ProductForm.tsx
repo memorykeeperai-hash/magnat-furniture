@@ -192,6 +192,7 @@ export default function ProductForm({ product, categories }: ProductFormProps) {
                   <option value="diningRoom">Dining Room</option>
                   <option value="bedroom">Bedroom</option>
                   <option value="office">Office</option>
+                  <option value="sitout">Sitout</option>
                 </select>
               </div>
             </div>

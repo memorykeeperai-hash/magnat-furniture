@@ -41,6 +41,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE}/rooms/dining-room`,  lastModified: NOW, changeFrequency: "weekly",  priority: 0.8 },
     { url: `${BASE}/rooms/living-room`,  lastModified: NOW, changeFrequency: "weekly",  priority: 0.8 },
     { url: `${BASE}/rooms/office`,       lastModified: NOW, changeFrequency: "weekly",  priority: 0.8 },
+    { url: `${BASE}/rooms/sitout`,       lastModified: NOW, changeFrequency: "weekly",  priority: 0.8 },
     // Showrooms page (corrected from /showroom)
     { url: `${BASE}/showrooms`,          lastModified: NOW, changeFrequency: "weekly",  priority: 0.95 },
   ];

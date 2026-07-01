@@ -20,6 +20,7 @@ const EXPLORE_DATA = {
     { name: "Dining Room", href: "/rooms/dining-room" },
     { name: "Bedroom", href: "/rooms/bedroom" },
     { name: "Office", href: "/rooms/office" },
+    { name: "Sitout", href: "/rooms/sitout" },
   ]
 };
 

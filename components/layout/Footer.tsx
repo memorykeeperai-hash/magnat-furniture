@@ -20,6 +20,7 @@ const footNav = [
       { label: "Dining Room", href: "/rooms/dining-room" },
       { label: "Master Bedroom", href: "/rooms/bedroom" },
       { label: "Executive Office", href: "/rooms/office" },
+      { label: "Sitout", href: "/rooms/sitout" },
     ]
   },
   {
